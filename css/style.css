@@ -1,0 +1,744 @@
+@import url(reset.css);
+
+/* google fonts 
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,400;1,700&display=swap');
+
+/* fontawesome cdn, libreria de iconos */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* variables; se declaran en :root, tamaño de fuentes, tipo de fuentes, anchos máximos, breakpoints.... */
+
+:root {
+
+    --color-principal: #fa573a;
+
+    --color-secundario: #21242e;
+
+    --fuentePrincipal: 'Montserrat', sans-serif;
+
+    --fuenteSecundaria: 'Handlee', cursive;
+
+    --anchoMaximo: 1100px;
+
+    --gris: #aaa;
+
+
+    /* para el encorsetado */
+
+
+}
+
+body {
+
+    font-family: var(--fuentePrincipal);
+    font-size: 1em;
+}
+
+img { /* siempre que se haga responsive */
+
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.container { /* encorsetar */
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
+
+
+.row {
+    display: flex;
+}
+
+
+/* Hasta aquí, estilos genéricos para todas las páginas */
+
+
+
+/* header */
+
+header .nav_top {
+    background-color: var(--color-secundario);
+    padding: 20px 10px;
+}
+
+header .nav_top a {
+    color: white;
+    font-size: 120%;
+    text-decoration: none;
+
+}
+
+header .nav_top a span{
+    display: none; /* para que no se vea en movil */
+}
+
+header .nav_top a i {
+    color: var(--color-principal);
+}
+
+
+header .nav_top .row {
+
+    justify-content: space-between;
+
+}
+
+
+header nav {
+    padding: 20px 10px;
+}
+
+
+header .hamburguesa {
+    width: 50px;
+    cursor: pointer; /* para que salga la manita */
+}
+
+header .hamburguesa div {
+    border-top: 2px solid var(--gris);
+    margin: 10px;
+}
+
+header nav .row {
+    
+    flex-wrap: wrap; /* ocupa todo el contenido */
+
+    justify-content: space-between; /* reparte el contenido  */
+    
+}
+
+
+header nav ul {
+
+    width: 100%;
+    
+}
+
+header nav .logo {
+
+    max-width: 110px;
+
+}
+
+header nav ul li a {
+
+    display: block;
+
+    text-align: center; /* para centrar texto, en este caso los enlaces */
+
+    text-decoration: none;
+
+    padding: 20px;
+
+    color: var(--gris);
+
+    border-bottom: 1px solid var(--gris);
+
+
+}
+
+header nav ul li a:hover {
+
+    color: var(--color-principal)
+
+}
+
+
+header nav ul li.activo {
+
+    color: var(--color-principal)
+}
+
+
+@media(min-width: 48em) {
+
+    header .nav_top a span{
+        display: inline;
+
+
+    }
+}
+
+@media(min-width: 62.750em) {
+
+    header .hamburguesa {
+
+        display:none;
+    }
+
+    header nav ul {
+
+        width: auto;
+    }
+
+    header nav ul li {
+        display: inline-block;
+
+    }
+
+    header nav ul li a {
+
+        padding: 5px 20px;
+
+        border-bottom: none;
+    }
+}
+
+/* fin header */
+
+
+/* inicio footer */
+
+footer {
+    background-color: var(--color-secundario);
+
+    padding: 20px 10px;
+
+    color:white;
+
+    text-align: center;
+
+    position: fixed;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    bottom: 0px;
+}
+
+
+footer a {
+
+    color: white;
+}
+
+footer a:hover {
+    
+    text-decoration: none;
+
+}
+
+@media(min-width: 48em) {
+
+    footer {
+        text-align: left;
+    }
+
+
+    }
+
+/* final footer */
+
+
+/* inicio hero */
+
+
+.hero {
+    background-image: url("../images/fondo.jpg");
+
+    background-color: #999;
+
+    background-blend-mode: multiply;
+
+    background-size: cover;
+
+    background-position: center center;
+
+    padding: 15% 10px;
+
+}
+
+
+.hero h1 {
+    font-family: var(--fuenteSecundaria);
+    color: white;
+    font-size: 2.5em;
+}
+
+.hero h2 {
+    color: var(--color-principal);
+    font-size: 1.5em;
+    margin: 1em 0;
+
+}
+
+.hero p {
+    color: white;
+    font-size: 1.10em;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 1.15em;
+    text-decoration: none;
+    margin: 1em 0;
+    border: 1px solid var(--color-principal);
+
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--color-principal);
+    
+}
+
+.boton:hover i {
+    transform: translateX(5px);  /* animar la flecha del boton */
+    
+}
+
+.boton i {
+    transition: 0.5s;
+}
+
+.hero ul li {
+    display: inline-block;
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.hero ul li a {
+    color:white
+}
+
+/* final hero */
+
+
+
+/* Inicio main section Our Services */
+
+main section {
+
+    padding: 2.125em 0.825em;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span{
+    color: var(--color-principal);
+}
+
+main section .underline {
+    position: relative;
+    width: 5em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: 700;
+    margin-bottom: 2em;
+    text-align: center;
+    
+}
+
+main section .underline hr {
+
+    position: absolute;
+    width: 100%;
+    top: -0.15em;
+    border-color: var(--color-principal);
+}
+
+main #ourservices .row { /* como no sabes si las demás secciones son flexibles, de momento solo en esta */
+    flex-wrap: wrap;
+    
+
+}
+
+main #ourservices article {
+    border-bottom: 1px solid var(--gris);
+    padding: 1.825em 0;
+
+
+}
+
+main #ourservices article div i {
+    color: var(--color-principal);
+    font-size: 2em; /* un icono es una fuente, no una imagen */
+    border: 2px solid var(--color-principal);
+    padding: 0.8rem; /* para no heredar del fontsize */
+}
+
+main #ourservices article .fa-truck {
+
+    transform: rotateY(180deg);
+
+
+}
+
+main #ourservices article h3 {
+    margin: 1em 0;
+    font-weight: 700;
+    
+}
+
+
+.enlace {
+    text-decoration: none;
+    color: var(--color-principal);
+    margin-top: 1em;
+    display: block;
+
+}
+
+
+@media(min-width: 48em) {
+    main #ourservices article {
+
+        width: 50%;
+        border-bottom: 0px;
+        border-left: 1px solid var(--gris);
+        padding: 1.825em;
+        margin-bottom: 1em;
+    }
+    main #ourservices article:last-child {
+
+        width: 100%;
+    }
+
+}
+
+@media(min-width: 62.750em) {
+    main #ourservices article, main #ourservices article:last-child { /* en base a la anterior @media */
+    width: 33.333% /* por el box-sizing */
+
+    }
+    
+}
+
+
+/* Fin main sectino Our Services */
+
+
+/* Inicio main section about us */
+
+main #aboutus {
+    padding-bottom: 110px
+}
+main #aboutus .row {
+
+    flex-wrap: wrap;
+}
+
+main #aboutus h3 {
+    font-weight: 700;
+    
+}
+
+main #aboutus h4 {
+    margin: 1em 0;
+    color: var(--color-principal);
+}
+
+main #aboutus .marco {
+    margin: 15px 0;
+    border: 3px solid var(--color-principal);
+    transform: rotateZ(10deg);
+    width: 90%;
+    transition: 1s; /* para que vuelva */
+
+}
+
+main #aboutus .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s; /* para que vuelva */
+}
+
+main #aboutus .columna:hover .marco, main #aboutus .columna:hover .marco img {
+    transform: rotateZ(0);
+}
+
+
+@media(min-width: 48.000em) {
+
+    main #aboutus .marco {
+        margin: 0px 15px;
+    }
+
+    main #aboutus .columna:first-child {
+        width: 40%;
+    }
+    main #aboutus .columna:last-child {
+        width: 60%;
+    }
+
+}
+/* Fin main section about us */
+
+
+/* Inicio section blog */
+
+main section article div.imagenFecha {
+
+    position: relative;
+
+}
+
+main section.blog.container div article p.fecha {  /*mirar a ver si va */
+    position: absolute;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 7%;
+    top: 0; /* por que(?) solo top y left en absolute? */
+    left: 0;
+    opacity: 0.8;
+    
+}
+
+main section.blog.container article .cuerpo {
+    padding: 5%;
+}
+
+main section.blog.container div.row { /* como no sabes si las demás secciones son flexibles, de momento solo en esta */
+    flex-wrap: wrap;
+    
+}
+
+main section.blog.container article { /* cambiarlo en la mediaquery */
+    
+    padding: 1rem; /* para no heredar del fontsize */
+
+    width: 50%;
+    margin-top: 1rem;
+    
+}
+
+
+main section.blog.container article h3 {
+    margin: 1em 0;
+    font-size: 1.3em;
+    
+}
+
+main section.blog.container div.row article span {
+
+    color: var(--color-principal);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+
+}
+
+@media(min-width: 62.750em) {
+
+    main section.blog.container article {
+        width: 33%  
+    }
+
+
+
+}
+
+/* Fin main blog */
+
+
+/* Inicio del main menu */
+
+
+.main_menu {
+    background-color: var(--color-secundario);
+}
+
+section.menu .row {
+    
+    flex-wrap: wrap;
+    
+}
+
+section.menu .row .primero {
+
+    width: 100%;
+    padding: 0 2%;
+}
+
+section.menu .row .sectionMenu {
+
+    width: 100%;
+}
+
+section.menu .row .sectionMenu .imagen {
+
+    width: 100%;
+    padding: 0 5% 5% 5%;
+}
+
+section .offers p {
+
+    padding: 5% 0;
+}
+section .offers {
+
+    padding-top: 10%;
+}
+section.menu .row .sectionMenu .texto {
+
+
+    padding: 0 0 5% 5%;
+    color: white;
+}
+
+.todays_menu h2{
+    color: white;
+}
+
+
+
+
+
+
+
+
+main section div div.nav_menu ul li a {
+
+
+
+        display: block;
+    
+        text-align: left; /* para centrar texto, en este caso los enlaces */
+    
+        text-decoration: none;
+    
+        padding: 20px;
+    
+        color: white;
+
+        width: 100%
+}
+
+
+main section div div.nav_menu ul li a.active {
+
+background-color: var(--color-principal);
+border-radius: 2%;
+
+/* no se queda  */
+
+}
+
+main section.menu.container h3 {
+    margin-bottom: 1em;
+    font-size: 1em;
+    color: white;
+    font-weight: 700;
+    
+}
+
+main section.menu.container h3 span {
+    padding-left: 4%;
+    
+    color: var(--color-principal);
+    font-weight: 700;
+
+}
+
+main section.menu.container a {
+    font-weight: 700;
+
+}
+
+
+main section.menu.container.row div h2{
+
+    color: white;
+}
+
+main section.menu.container.row div p{
+
+    color: white;
+    padding-bottom: 3%;
+}
+
+.top_icono {
+
+    
+    position: absolute;
+    right: 0;
+    
+}
+
+.top_icono i {
+
+    display: inline-block;
+    padding: 10px;
+    background-color: var(--color-principal);
+}
+
+main section .underline_menu {
+ color: white;
+ 
+    
+}
+
+main section .underline_menu hr {
+
+    width: 20%;
+
+    margin: 0;
+
+    border-color: var(--color-principal);
+
+
+}
+
+@media(min-width: 62.750em) {
+
+    section.menu .row .primero {
+
+        width: 40%;
+    }
+    
+    section.menu .row .sectionMenu {
+    
+        width: 60%;
+    }
+
+    section.menu .row .sectionMenu article .row {
+        flex-wrap: wrap;
+    }
+
+    section.menu .row .sectionMenu .row .imagen {
+        width: 30%;
+    }
+    section.menu .row .sectionMenu .row .texto {
+        width: 70%;
+    }
+
+    .top_icono {
+        display: none;
+    }
+
+
+
+
+
+}
+
+
+
+/* Falta: bajar un poco Order now
+
+        el icono de abajo a la derecha para top
+        
+        ponerle color al link activo
+        
+        el titulo de las hamburguesas debajo de la imagen justo*/
+

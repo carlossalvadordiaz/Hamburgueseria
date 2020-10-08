@@ -1,0 +1,459 @@
+@import url(reset.css);
+
+/* google fonts 
+font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,400;1,700&display=swap');
+
+/* fontawesome cdn, libreria de iconos */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* variables; se declaran en :root, tamaño de fuentes, tipo de fuentes, anchos máximos, breakpoints.... */
+
+:root {
+
+    --color-principal: #fa573a;
+
+    --color-secundario: #21242e;
+
+    --fuentePrincipal: 'Montserrat', sans-serif;
+
+    --fuenteSecundaria: 'Handlee', cursive;
+
+    --anchoMaximo: 1100px;
+
+    --gris: #aaa;
+
+
+    /* para el encorsetado */
+
+
+}
+
+body {
+
+    font-family: var(--fuentePrincipal);
+    font-size: 1em;
+}
+
+img { /* siempre que se haga responsive */
+
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.container { /* encorsetar */
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
+
+
+.row {
+    display: flex;
+}
+
+
+/* Hasta aquí, estilos genéricos para todas las páginas */
+
+
+
+/* header */
+
+header .nav_top {
+    background-color: var(--color-secundario);
+    padding: 20px 10px;
+}
+
+header .nav_top a {
+    color: white;
+    font-size: 120%;
+    text-decoration: none;
+
+}
+
+header .nav_top a span{
+    display: none; /* para que no se vea en movil */
+}
+
+header .nav_top a i {
+    color: var(--color-principal);
+}
+
+
+header .nav_top .row {
+
+    justify-content: space-between;
+
+}
+
+
+header nav {
+    padding: 20px 10px;
+}
+
+
+header .hamburguesa {
+    width: 50px;
+    cursor: pointer; /* para que salga la manita */
+}
+
+header .hamburguesa div {
+    border-top: 2px solid var(--gris);
+    margin: 10px;
+}
+
+header nav .row {
+    
+    flex-wrap: wrap; /* ocupa todo el contenido */
+
+    justify-content: space-between; /* reparte el contenido  */
+    
+}
+
+
+header nav ul {
+
+    width: 100%;
+    
+}
+
+header nav .logo {
+
+    max-width: 110px;
+
+}
+
+header nav ul li a {
+
+    display: block;
+
+    text-align: center; /* para centrar texto, en este caso los enlaces */
+
+    text-decoration: none;
+
+    padding: 20px;
+
+    color: var(--gris);
+
+    border-bottom: 1px solid var(--gris);
+
+
+}
+
+header nav ul li a:hover {
+
+    color: var(--color-principal)
+
+}
+
+
+header nav ul li.activo {
+
+    color: var(--color-principal)
+}
+
+
+@media(min-width: 48em) {
+
+    header .nav_top a span{
+        display: inline;
+
+
+    }
+}
+
+@media(min-width: 62.750em) {
+
+    header .hamburguesa {
+
+        display:none;
+    }
+
+    header nav ul {
+
+        width: auto;
+    }
+
+    header nav ul li {
+        display: inline-block;
+
+    }
+
+    header nav ul li a {
+
+        padding: 5px 20px;
+
+        border-bottom: none;
+    }
+}
+
+/* fin header */
+
+
+/* inicio footer */
+
+footer {
+    background-color: var(--color-secundario);
+
+    padding: 20px 10px;
+
+    color:white;
+
+    text-align: center;
+
+    position: fixed;
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    bottom: 0px;
+}
+
+
+footer a {
+
+    color: white;
+}
+
+footer a:hover {
+    
+    text-decoration: none;
+
+}
+
+@media(min-width: 48em) {
+
+    footer {
+        text-align: left;
+    }
+
+
+    }
+
+/* final footer */
+
+
+/* inicio hero */
+
+
+.hero {
+    background-image: url("../images/fondo.jpg");
+
+    background-color: #999;
+
+    background-blend-mode: multiply;
+
+    background-size: cover;
+
+    background-position: center center;
+
+    padding: 15% 10px;
+
+}
+
+
+.hero h1 {
+    font-family: var(--fuenteSecundaria);
+    color: white;
+    font-size: 2.5em;
+}
+
+.hero h2 {
+    color: var(--color-principal);
+    font-size: 1.5em;
+    margin: 1em 0;
+
+}
+
+.hero p {
+    color: white;
+    font-size: 1.10em;
+}
+
+.boton {
+    display: inline-block;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 1.15em;
+    text-decoration: none;
+    margin: 1em 0;
+    border: 1px solid var(--color-principal);
+
+}
+
+.boton:hover {
+    background-color: transparent;
+    color: var(--color-principal);
+    
+}
+
+.boton:hover i {
+    transform: translateX(5px);  /* animar la flecha del boton */
+    
+}
+
+.boton i {
+    transition: 0.5s;
+}
+
+.hero ul li {
+    display: inline-block;
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.hero ul li a {
+    color:white
+}
+
+/* final hero */
+
+
+
+/* Inicio main section blog */
+
+main section {
+
+    padding: 2.125em 0.825em;
+    flex-wrap: wrap;
+   
+}
+
+main section article div.imagenFecha {
+
+    position: relative;
+
+}
+
+main section div article p.fecha {
+    position: absolute;
+    background-color: var(--color-principal);
+    color: white;
+    padding: 7%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+}
+
+main section article .cuerpo {
+    padding: 5%;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span{
+    color: var(--color-principal);
+}
+
+main section .underline {
+    position: relative;
+    width: 5em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: 700;
+    margin-bottom: 2em;
+    text-align: center;
+    
+}
+
+main section .underline hr {
+
+    position: absolute;
+    width: 100%;
+    top: -0.15em;
+    border-color: var(--color-principal);
+}
+
+main section div.row { /* como no sabes si las demás secciones son flexibles, de momento solo en esta */
+    flex-wrap: wrap;
+    
+
+}
+
+
+
+
+main section article {
+    
+    padding: 1rem; /* para no heredar del fontsize */
+
+    width: 50%;
+    margin-top: 1rem;
+    
+}
+
+
+main section article h3 {
+    margin: 1em 0;
+    font-size: 2em;
+    
+}
+
+main section div.row article span {
+
+    color: var(--color-principal);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+
+}
+
+
+.enlace {
+    text-decoration: none;
+    color: var(--color-principal);
+    margin-top: 1em;
+    display: block;
+
+}
+
+
+
+
+
+@media(min-width: 48em) {
+    main #ourservices article {
+
+        width: 50%;
+        border-bottom: 0px;
+        border-left: 1px solid var(--gris);
+        padding: 1.825em;
+        margin-bottom: 1em;
+    }
+    main #ourservices article:last-child {
+
+        width: 100%;
+    }
+
+}
+
+@media(min-width: 62.750em) {
+    main #ourservices article, main #ourservices article:last-child { /* en base a la anterior @media */
+    width: 33.333% /* por el box-sizing */
+
+    }
+
+}
+
+
+
+/* Fin main sectino Our Services */
+
+
+
