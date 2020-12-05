@@ -19,15 +19,15 @@
 
 ### Main Home
 
-<a href="https://github.com/carlossalvadordiaz/Hamburgueseria/blob/master/practica_7octubre/images/ourServices.jpg" target="_blank"> <img src="/practica_7octubre/images/ourServices.jpg"/></a>
+<a href="https://github.com/carlossalvadordiaz/Hamburgueseria/blob/master/practica_7octubre/images/ourServices.jpg" target="_blank"> <img src="/practica_7octubre/images/ourServices.png"/></a>
 
 ### Main Menu
 
-<a href="https://github.com/carlossalvadordiaz/Hamburgueseria/blob/master/practica_7octubre/images/menu.jpg" target="_blank"> <img src="/practica_7octubre/images/menu.jpg"/></a>
+<a href="https://github.com/carlossalvadordiaz/Hamburgueseria/blob/master/practica_7octubre/images/menu.jpg" target="_blank"> <img src="/practica_7octubre/images/menu.png"/></a>
 
 ### Mobile responsive
 
-<a href="https://github.com/carlossalvadordiaz/Hamburgueseria/blob/master/practica_7octubre/images/mobile.jpg" target="_blank"> <img src="/practica_7octubre/images/mobile.jpg"/></a>
+<a href="https://github.com/carlossalvadordiaz/Hamburgueseria/blob/master/practica_7octubre/images/mobile.jpg" target="_blank"> <img src="/practica_7octubre/images/mobile.png"/></a>
 
 ### Built With
 
