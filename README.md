@@ -13,10 +13,21 @@
 
 ## Overview
 
+### Header & Hero
 
-<a href="https://github.com/carlossalvadordiaz/AppGymBack/blob/master/public/images/ApiEjercicios.png" target="_blank"> <img src="/public/images/ApiEjercicios.png"/></a>
+<a href="https://github.com/carlossalvadordiaz/Hamburgueseria/blob/master/practica_7octubre/images/header.jpg" target="_blank"> <img src="/practica_7octubre/images/header.jpg"/></a>
 
+### Main Home
 
+<a href="https://github.com/carlossalvadordiaz/Hamburgueseria/blob/master/practica_7octubre/images/ourServices.jpg" target="_blank"> <img src="/practica_7octubre/images/ourServices.jpg"/></a>
+
+### Main Menu
+
+<a href="https://github.com/carlossalvadordiaz/Hamburgueseria/blob/master/practica_7octubre/images/menu.jpg" target="_blank"> <img src="/practica_7octubre/images/menu.jpg"/></a>
+
+### Mobile responsive
+
+<a href="https://github.com/carlossalvadordiaz/Hamburgueseria/blob/master/practica_7octubre/images/mobile.jpg" target="_blank"> <img src="/practica_7octubre/images/mobile.jpg"/></a>
 
 ### Built With
 
